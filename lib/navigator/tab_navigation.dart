@@ -23,20 +23,22 @@ class _TabNavigationState extends State<TabNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
-        controller: _pageController,
-        onPageChanged: (page) {
-          setState(() {
-            _currentIndex = page;
-          });
-        },
-        children: [
-          HomePage(),
-          SearchPage(hideLeft: true),
-          TravelPage(),
-          MyPage(pageController: _pageController)
-        ],
-        physics: NeverScrollableScrollPhysics(),
+      body: SafeArea(
+        child: PageView(
+          controller: _pageController,
+          onPageChanged: (page) {
+            setState(() {
+              _currentIndex = page;
+            });
+          },
+          children: [
+            HomePage(),
+            SearchPage(hideLeft: true),
+            TravelPage(),
+            MyPage(pageController: _pageController)
+          ],
+          physics: NeverScrollableScrollPhysics(),
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,

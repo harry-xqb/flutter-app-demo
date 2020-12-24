@@ -110,8 +110,8 @@ class _SearchPageState extends State<SearchPage> {
     return  Column(
       children: [
         Container(
-          height: 70,
-          padding: EdgeInsets.only(top: 20),
+          height: 50,
+          // padding: EdgeInsets.only(top: 20),
           decoration: BoxDecoration(
               color: Colors.white
           ),

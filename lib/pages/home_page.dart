@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin{
             ),
           ),
           child: Container(
-            padding: EdgeInsets.fromLTRB(5, 30, 5, 15),
+            padding: EdgeInsets.fromLTRB(5, 10, 5, 10),
             decoration: BoxDecoration(
               color: Color.fromARGB((255 * appBarOpacity).toInt(), 255, 255, 255)
             ),
@@ -164,7 +164,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin{
                 Navigator.push(
                   context,
                     MaterialPageRoute(builder: (context) {
-                      return SearchPage(hint: DEFAULT_SEARCH_HINT);
+                      return SafeArea(child: SearchPage(hint: DEFAULT_SEARCH_HINT));
                     })
                 );
               }

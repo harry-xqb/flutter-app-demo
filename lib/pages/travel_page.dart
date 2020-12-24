@@ -48,7 +48,6 @@ class _TravelPageState extends State<TravelPage> with TickerProviderStateMixin, 
   get _tabs{
     return Container(
       color: Colors.white,
-      padding: EdgeInsets.only(top: 27),
       child: TabBar(
         isScrollable: true,
         labelPadding: EdgeInsets.fromLTRB(20, 0, 20, 5),
